@@ -1,0 +1,1 @@
+<cite class="entry-meta"><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('j F, Y') ?></time>  •  <?php the_category(', ') ?>  •  </cite>
