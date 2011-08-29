@@ -43,6 +43,15 @@ function comment_count( $count ) {
         }
 }
 
+function theme_queue_js(){
+  if (!is_admin()){
+    if (!is_page() AND is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+      wp_enqueue_script( 'comment-reply' );
+    }
+  }
+}
+add_action('get_header', 'theme_queue_js');
+
 add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video'));
 add_filter('show_admin_bar', '__return_false'); 
 ?>
