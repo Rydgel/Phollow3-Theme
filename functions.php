@@ -13,21 +13,19 @@ function catch_that_image() {
  return $first_img;
 }
 
-function improved_trim_excerpt($text) {
+function improved_trim_excerpt() {
         global $post;
-        if ( '' == $text ) {
-                $text = get_the_content('');
-                $text = apply_filters('the_content', $text);
-                $text = str_replace('\]\]\>', ']]&gt;', $text);
-                $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-                $text = strip_tags($text);
-                $excerpt_length = 80;
-                $words = explode(' ', $text, $excerpt_length + 1);
-                if (count($words)> $excerpt_length) {
-                        array_pop($words);
-                        array_push($words, '&hellip;');
-                        $text = implode(' ', $words);
-                }
+        $text = get_the_content('');
+        $text = apply_filters('the_content', $text);
+        $text = str_replace('\]\]\>', ']]&gt;', $text);
+        $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+        $text = strip_tags($text);
+        $excerpt_length = 80;
+        $words = explode(' ', $text, $excerpt_length + 1);
+        if (count($words)> $excerpt_length) {
+                array_pop($words);
+                array_push($words, '&hellip;');
+                $text = implode(' ', $words);
         }
         return $text;
 }
