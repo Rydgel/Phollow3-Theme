@@ -25,7 +25,7 @@
 	</div>
 
 	<ol class="commentlist">
-		<?php wp_list_comments(array('type' => 'comment', 'reply_text' => 'Répondre', 'avatar_size' => 30, 'max_depth' => 1)); ?>
+		<?php wp_list_comments(array('type' => 'comment', 'reply_text' => 'Répondre', 'avatar_size' => 30)); ?>
 	</ol>
 
 	<div class="navigation">
