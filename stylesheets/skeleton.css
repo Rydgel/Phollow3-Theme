@@ -45,12 +45,8 @@
     .container .offset-by-fifteen               { padding-left: 93.75%; }
     
     
-/*  #Mobile (Portrait) 
-================================================== */
     
-    /* Note: Design for a width of 320px */
-    
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
         .columns, .column { margin: 0; }
         
         .container .one.column,

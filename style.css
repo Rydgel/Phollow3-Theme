@@ -606,7 +606,7 @@ span.says, .comment-edit-link {
 	}
 	
 	/* Mobile/Browser */
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: 768px) {
 	  
 	  body {
 	    font-size: 15px;
@@ -656,7 +656,7 @@ span.says, .comment-edit-link {
 	}
 	
 	/* Mobile Landscape/Browser */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
+	@media only screen and (min-width: 480px) and (max-width: 768px) {
 	  
 	}
 	
@@ -671,12 +671,12 @@ span.says, .comment-edit-link {
 	}
 	
 	/* Mobile Only */
-	@media only screen and (max-width: 767px) and (max-device-width: 1000px) {
+	@media only screen and (max-width: 768px) and (max-device-width: 1000px) {
 	  
 	}
 	
 	/* Mobile Landscape Only */
-	@media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {
+	@media only screen and (min-width: 480px) and (max-width: 768px) and (max-device-width: 1000px) {
 	  
 	}
 	
