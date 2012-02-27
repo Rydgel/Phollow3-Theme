@@ -27,12 +27,6 @@
         <?php wp_list_bookmarks( 'title_li=&categorize=0' ); ?> 
       </ul>
     </li>
-    <li class="archives">
-      <h3>Archives</h3>
-      <ul>
-        <?php wp_get_archives('show_post_count=true'); ?> 
-      </ul>
-    </li>
 </ul>
   <?php endif; ?>
 </aside>

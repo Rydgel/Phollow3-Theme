@@ -25,7 +25,7 @@
 	</div>
 
 	<ol class="commentlist">
-		<?php wp_list_comments(array('type' => 'comment', 'reply_text' => 'Répondre', 'avatar_size' => 30)); ?>
+		<?php wp_list_comments(array('type' => 'comment', 'reply_text' => 'Répondre', 'avatar_size' => 30, 'max_depth' => 1)); ?>
 	</ol>
 
 	<div class="navigation">
@@ -66,6 +66,7 @@
 			<p>Identifié en tant que <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Déconnexion">Déconnexion &raquo;</a></p>
 
 		<?php else : ?>
+<div id="comment-user-details"><?php do_action('alt_comment_login'); ?>
 			<div>
 			  <label for="author">Nom <?php if ($req) echo "(*)"; ?></label>
 				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
@@ -80,7 +81,7 @@
 			  <label for="url">Site web</label>
 				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 			</div>
-
+</div>
 		<?php endif; ?>
 
 		<div>
@@ -88,7 +89,7 @@
 		</div>
 
 		<div>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Poster" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="Poster le commentaire" />
 			<?php comment_id_fields(); ?>
 		</div>
 		
@@ -103,4 +104,5 @@
 </div>
 
 <?php endif; ?>
+
 </section>

@@ -1,17 +1,25 @@
-<footer id="footer" class="sixteen columns">
-  <form class="searchform" method="get" action="/">
-    <input name="s" size="30" type="search" placeholder="Rechercher sur le site" results="0">
-  </form>
-  <span class="copyright">Copyright © 2011 <a href="https://plus.google.com/113221045987282389062?rel=author" title="Google+ Jérôme Mahuet">Jérôme Mahuet+</a> All Rights Reserved. Hosted by <a href="http://www.rackspace.com/">Rackspace US, Inc.</a></span>
-  <a title="<?php bloginfo( 'name' ) ?>" class="footer-logo-link" href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('template_directory'); ?>/images/phollow-logo-footer.png" alt="<?php bloginfo( 'name' ) ?>"></a>
+<footer id="footer" role="contentinfo" class="sixteen columns">
+	<nav role="navigation">
+		<ul>
+			<li><a href="/">Homepage</a></li>
+			<li><a href="http://twitter.com/phollow">Twitter</a></li>
+			<li><a href="https://www.facebook.com/Phollow.fr">Facebook</a></li>
+			<li><a href="http://dribbble.com/phollow">Dribbble</a></li>
+			<li><a href="mailto:rydgel@phollow.fr">Contact</a></li>
+		</ul>
+	</nav>		
+	<span class="copyright">Copyright © 2011 <a rel="author" href="https://plus.google.com/113221045987282389062?rel=author" title="Jérôme Mahuet">+Jérôme Mahuet</a> All Rights Reserved. Hosted by <a href="http://www.rackspace.com/">Rackspace US, Inc.</a></span>
+<a title="<?php bloginfo( 'name' ) ?>" class="footer-logo-link" href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('template_directory'); ?>/images/phollow-logo-footer.png" alt="<?php bloginfo( 'name' ) ?>"></a>
 </footer>
+
 </div><!-- container -->
 <div id="fb-root"></div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>window.jQuery || document.write("<script src='<?php bloginfo('template_directory'); ?>/javascripts/jquery-1.6.2.min.js'>\x3C/script>")</script>
+<script src="<?php bloginfo('template_directory'); ?>/javascripts/jquery-1.7.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/javascripts/jquery.easing-1.3.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/javascripts/plugins.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/javascripts/app.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/javascripts/app.js?3"></script>
 <script src="<?php bloginfo('template_directory'); ?>/javascripts/fitText.js"></script>
+<script src="http://cdn.sublimevideo.net/js/6ew50om6.js"></script>
 
 <!--[if (lt IE 9) & (!IEMobile)]>
 <script src="<?php bloginfo('template_directory'); ?>/javascripts/libs/DOMAssistantCompressed-2.8.js"></script>
@@ -21,7 +29,7 @@
 
 <!-- Change UA-XXXXX-X to be your site's ID -->
 <script>
-    window._gaq = [['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    window._gaq = [['_setAccount','UA-7098745-1'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
@@ -36,7 +44,7 @@
 
 <script>
   window.fbAsyncInit = function() {
-    FB.init({appId: 'YOURAPPIDLOL', status: true, cookie: true,
+    FB.init({appId: '101739241646', status: true, cookie: true,
              xfbml: true});
   };
   (function() {
@@ -46,7 +54,15 @@
     document.getElementById('fb-root').appendChild(e);
   }());
 </script>
-<script src="http://platform.twitter.com/widgets.js"></script>
+<script>
+      (function(){
+        var twitterWidgets = document.createElement('script');
+        twitterWidgets.type = 'text/javascript';
+        twitterWidgets.async = true;
+        twitterWidgets.src = '//platform.twitter.com/widgets.js';
+        document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+      })();
+</script>
 <script>
   window.___gcfg = {lang: 'fr'};
 
@@ -57,6 +73,19 @@
   })();
 </script>
 
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ec64821f5a1f55c33000003');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

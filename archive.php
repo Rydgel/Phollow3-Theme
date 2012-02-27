@@ -38,7 +38,7 @@
 						<?php include (TEMPLATEPATH . '/_/inc/meta.php' ); ?>
 
 						<div class="entry">
-							<?php echo improved_trim_excerpt(); ?>
+							<?php echo improved_trim_excerpt(50); ?>
 						</div>
 						
 						<footer class="permalink-button">
